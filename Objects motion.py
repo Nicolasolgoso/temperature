@@ -1,8 +1,10 @@
-frase_input =str(input("Tu frase para invertir:"))
-frase_list = frase_input.split()
+initial_position = float(input("Introduce la posición inicial en metros: "))
+initial_velocity = float(input("Introduce la velocidad inicial (m/s): "))
+acceleration = float(input("Introduce la aceleración (m/s^2): "))
+time = float(input("Introduce el tiempo (s): "))
 
-frase_list.reverse()
+final_position = initial_position + initial_velocity * time  + 0.5 * acceleration * time * time
+velocity = initial_velocity + acceleration * time
 
-print(frase_list)
-frase_output = " ".join(frase_list)
-print(frase_output)
+print("La posición final es: ", final_position)
+print("La velocidad final es: ", velocity)
